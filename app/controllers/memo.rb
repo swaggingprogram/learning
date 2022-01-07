@@ -47,3 +47,31 @@ def bar
   "bar"
 end
 
+empty? include?は述語メソッドという
+
+真偽値を判定するメソッドを作る場合は
+
+def abc(n)
+  if n % 3 == 0
+    true
+  else
+    false
+  end
+end
+
+とするんじゃなくて
+
+def abc?(n)
+  n % 3 == 0
+end
+
+とすると条件分岐がいらない
+
+!メソッドは破壊的メソッドと呼ばれる
+
+upcaseメソッドの場合
+
+a = "ruby"
+a.upcase = a = "ruby"となるが
+
+a.upcase! = a ="RUBY"に変換されてしまう。
