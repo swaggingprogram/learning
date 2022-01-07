@@ -55,3 +55,13 @@ aが真であることを調べるメソッド
 
 refuse a
 aが偽であることを調べるメソッド
+
+require_relative
+自作のプログラムを別のプログラムで読み込むためのもの
+ひとつ上のディレクトリに存在するときは
+require_relative '../bar/bye'
+同じディレクトリに存在するときは
+require_relative 'bye'
+と宣言
+
+
