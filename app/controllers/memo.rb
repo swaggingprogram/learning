@@ -75,3 +75,12 @@ a = "ruby"
 a.upcase = a = "ruby"となるが
 
 a.upcase! = a ="RUBY"に変換されてしまう。
+
+numbers = [1,2,3,4,5]
+new_numbers = []
+numbers.each { |n| news_numbers <<n*10}
+= new_numbers = {10,20,30,40,50}
+
+numbers = [1,2,3,4,5]
+new_numbers = numbers.map {|n| n*10}
+= new_numbers = {10,20,30,40,50}
