@@ -36,3 +36,14 @@ falseを出したいなら!s.empty?とかく
 
 !s = sの偽を出す
 true自体を判定したい場合は　== trueとなる
+
+メソッドの引数に戻り値を入れることも可能
+
+def foo(time = Time.now, message = bar)
+  message
+end
+
+def bar 
+  "bar"
+end
+
