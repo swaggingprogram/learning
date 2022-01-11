@@ -151,4 +151,27 @@ numbers.sum(5): 初期値を0じゃなくて5にしてくれる
 ex rainge = 1..5
 range.include?(0) = false
 range.include?(4.9) = true
+(1..5).include?(4) = rangeオブジェクトをメソッドにかける場合は()をつける
+
+・配列を取り出す場合
+a = [1,2,3,4,5]
+a[1..3] = 2,3,4が取り出される
+
+rangeはcaseメソッドでも使える
+def charge(age)
+  case age
+  when 0..5
+    0
+  when 6..12
+    300
+  else
+    1000
+  end
+end
+
+(1..5).to_a をつかうと連続した配列を作成できる
+=[1,2,3,4,5]
+
+
+
 
