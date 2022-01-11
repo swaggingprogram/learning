@@ -118,3 +118,37 @@ numbers = [1,2,3,4,5]
 even_numbers = numbers.select {|n| n.even?}
 =even_numbers = [2,4] :numbersが偶数の時だけ配列に入る
 
+.rejectメソッド　selectの逆。条件式の条件に当てはまらないものが
+配列として返される
+
+ex numbers = [1,2,3,4,5]
+reject_numbers = numbers.reject {|n| n % 3 == 0}
+= reject_numbers= [1,2,4,5]
+
+.findメソッド
+配列の要素内で最初に真になったものを返す
+
+ex numbers = [1,2,3,4,5]
+even_numbers.find {|n| n.even?}
+even_numbers = 2
+
+※detectでも同じことが可能
+
+.sum 配列の合計
+ex numbers = [1,2,3,4,5]
+numbers.sum {|n| n*2} とすれば配列の要素を2倍にしながら
+合計を出してくれる
+
+numbers.sum(5): 初期値を0じゃなくて5にしてくれる
+
+.joinメソッド　文字列を結合してくれる
+.join('-')にすると、要素の間にーを追加して結合してくれる
+
+範囲オブジェクト　range
+(1..5) 1から5までを含む
+(1...5) 最後の5は含まない　1〜4まで
+
+ex rainge = 1..5
+range.include?(0) = false
+range.include?(4.9) = true
+
