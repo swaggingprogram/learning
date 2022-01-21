@@ -34,3 +34,18 @@ s[1..3]
     
 16進数を10進数にするには.hexメソッドを使う
 "00".hex = 0
+
+def to_ints(hex)
+  r = hex[1..2]
+  g = hex[3..4]
+  b = hex[5..6]
+  ints = []
+  [r,g,b].each do |s|
+    ints << s.hex
+  end
+  ints
+end
+
+配列に要素を加えるのは <<
+
+mapメソッド
