@@ -48,4 +48,15 @@ end
 
 配列に要素を加えるのは <<
 
-mapメソッド
+mapメソッド オブジェクトを配列として返すメソッド
+
+def to_ints(hex)
+  r = hex[1..2]
+  g = hex[3..4]
+  b = hex[5..6]
+  [r,g,b].map do |s|
+    s.hex
+  end
+end
+
+
