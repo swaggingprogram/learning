@@ -265,3 +265,16 @@ greet("田中","鈴木","斎藤")　と、引数を無制限で指定できる
 .splitメソッド 引数で渡した部分で区切って、配列として渡すメソッド
 
 "Ruby,Java,Python".split(",") = ["Ruby","java","Python"]
+
+a = Array.new = a = []
+a = Array.new(3) = a = [nil, nil, nil]
+a = Array.new(5, "default") = ["default", "default", "default", "default", "default"]
+
+a = "abcde"
+a[2] = "c"
+a[1,3] = "bcd"
+a[-1] = "e"
+a[0] = "X" = "Xbcde"
+a[1,3] = "" = "XYe" aの１から３番目の要素をYに置き換える
+
+a << "PDR" = "XYePDR"
