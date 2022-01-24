@@ -258,3 +258,10 @@ end
 greet("田中")
 greet("田中","鈴木")
 greet("田中","鈴木","斎藤")　と、引数を無制限で指定できる
+
+.charsメソッド 文字列を分解して配列として返す
+"Ruby".chars = ["R","u","b","y"]
+
+.splitメソッド 引数で渡した部分で区切って、配列として渡すメソッド
+
+"Ruby,Java,Python".split(",") = ["Ruby","java","Python"]
