@@ -61,4 +61,17 @@ aの大きさが３になるまで配列の末尾から引いていく
 
 .delete_at(-1) 配列の一番最後を削除する
 
+for文
+numbers = [1,2,3,4]
+sum = 0
+for n in numbers
+  sum += n
+end
+sum
 
+配列の要素をsumに足していく
+
+sum = 0
+for n in numbers do sum +=n end
+sum
+と、一行で書くことも可能 
