@@ -91,3 +91,20 @@ loop do
   break if sum == 5
 end
 
+メソッドの中でメソッドをもう一度呼び出すことを、再帰呼び出しという
+def factorial(n)
+  n > 0? n * factorial(n - 1):1
+end
+
+#break next redo 
+break 繰り返し処理を脱出する
+numbers = [1,2,3,4,5].shuffle:配列の要素をランダムで入れ替えるメソッド
+numbers.each do |n|
+  puts n
+  break if n == 5
+end
+
+whileやforでもbreakは使える
+繰り返し処理が入れ子になっている場合は、内側の繰り返しを終わらせる
+
+#throw catch
