@@ -137,5 +137,57 @@ catch throwを使うことによって、纏めてすべての繰り返し処理
 
 catchとthrowのタグは一致しないとエラーが出る
 
+breakとreturnの違い
+break: 繰り返し処理のみからの脱出
+return: メソッドの処理からの脱出
+
+returnが入ると、メソッド自体が終わる
+
+#next
+numbers = [1,2,3,4]
+numbers.each do |n|
+  next if n.even?
+  puts n
+end
+
+numbers = [1,2,3,4,5]
+i = 0
+while i < numbers.size
+  n = numbers[i]
+  i += 1
+  next if n.even?
+  puts n
+end
+
+nextは条件を満たすときのみ、次の処理に移るメソッド
+
+#redo
+繰り返し処理をやり直したいときに使うメソッド
+
+foods = ["apple", "banana","melon"]
+foods.each do |food|
+  print "#{food}は好き？"
+  answer = ["yes", "no"].sample 
+  puts answer
+
+  redo unless answer == "yes"
+end
+
+yesが出力されないと繰り返し処理がやり直される
+
+foods = ["apple", "banana","melon"]
+count = 0
+foods.each do |food|
+  answer = "no"
+  puts answer
+
+  count += 1
+
+  redo if answer != "yes" && count < 2
+  count = 0
+end
+
+redoに回数制限をつけることもできる
+
 
 
