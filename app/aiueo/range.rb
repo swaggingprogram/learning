@@ -108,3 +108,34 @@ whileやforでもbreakは使える
 繰り返し処理が入れ子になっている場合は、内側の繰り返しを終わらせる
 
 #throw catch
+基本形
+catch タグ　do
+  #繰り返し処理など
+  throw タグ
+end
+※タグはシンボル　:
+
+fruits = ["apple", "melon", "orange"]
+numbers = [1,2,3]
+catch :done do
+  fruis.shuffle.each do |fruit| 
+    numbers.shuffle.each do |n|
+      puts "#{fruit}, #{n}"
+      if fruit == "orange" && n == 3
+        throw :done #全ての繰り返し処理を脱出する
+      end
+    end
+  end
+end
+
+配列fruitsをシャッフルして繰り返し処理
+配列numbersをシャッフルして繰り返し処理
+fruitとnを出力
+fruitとnが指定の条件になったら、全ての処理をストップ
+
+catch throwを使うことによって、纏めてすべての繰り返し処理を止めることができる
+
+catchとthrowのタグは一致しないとエラーが出る
+
+
+
