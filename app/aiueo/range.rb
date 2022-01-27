@@ -75,3 +75,19 @@ sum = 0
 for n in numbers do sum +=n end
 sum
 と、一行で書くことも可能 
+
+無限ループ　loop
+loop do
+  処理内容
+end
+loop do 
+  sum +=1
+end
+
+無限ループを抜けたい場合は、条件をつけてbreakと宣言
+sum = 0
+loop do
+  sum +=1
+  break if sum == 5
+end
+
